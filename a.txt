@@ -1,0 +1,9 @@
+Linguagens usadas:
+Python(Django)
+HTML5
+CSS3
+JavaScript
+
+Ultilização das Linguagens
+Python Django: Facilita a integração de apendizagem para chatbot em Python e retorno da mesma para o front-end.
+HTML5, CSS3, JavaScript: Para estilização e apresentação do projeto.
