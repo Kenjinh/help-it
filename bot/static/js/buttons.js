@@ -1,5 +1,5 @@
-createRowBot('Seja bem-vindo, sou o Curso em bot e estarei te auxiliando a escolher algum determinado curso ou auxiliando a aprender sobre algumas das áreas de TI!Escolha uma das seguintes opções:' +
-    '</br><button id="buttonSay" class="btn btn-outline-dark mt-2" onClick="sendButton(this.value);" value="Quero visualizar os cursos disponíveis">Quero visualizar os cursos disponíveis</button>');
+createRowBot('Bem-vindo ao help IT chatbot espero que consigamos te auxiliar no seu problema. Clique em qual ferramenta está sendo problema:' +
+    '</br><button id="buttonSay" class="btn btn-outline-dark mt-2" onClick="sendButton(this.value);" value="Outlook">Outlook</button></br><button id="buttonSay" class="btn btn-outline-dark mt-2" onClick="sendButton(this.value);" value="Cisco Jabber">Cisco Jabber</button></br><button id="buttonSay" class="btn btn-outline-dark mt-2" onClick="sendButton(this.value);" value="Citrix">Citrix</button>');
 
 
 
