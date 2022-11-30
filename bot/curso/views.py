@@ -17,9 +17,7 @@ class ChatterBotApiView(View):
     """
 
     
-    chatterbot = ChatBot('Help-It', logic_adapters=['chatterbot.logic.BestMatch', 'chatterbot.logic.MathematicalEvaluation'],storage_adapter='chatterbot.storage.SQLStorageAdapter',
-    database_uri='sqlite:///database.sqlite3'
-    )
+    chatterbot = ChatBot('Help-It')
     # trainer = ChatterBotCorpusTrainer(chatterbot)
     # trainer.train('chatterbot.corpus.portuguese')
     # trainer = ListTrainer(chatterbot)
@@ -71,24 +69,29 @@ class ChatterBotApiView(View):
         # region outlook
         elif response_data['in_response_to'] == 'outlook':
              response_data['text'] = 'Em qual área você precisa de ajuda:</br>' + \
-                                     'Outlook – Siga as seguintes instruções</br>' + \
-                                     '1.	Cheque se está conectado com a internet</br>'+ \
-                                     '2.	Reinicie o computador</br>'+ \
-                                     '3.	Passando atendimento para analista de 2° nível</br>'
+                                    'Outlook – Siga as seguintes instruções</br>' + \
+                                    '1.	Cheque se está conectado com a internet</br>'+ \
+                                    '2.	Reinicie o computador</br>'+ \
+                                    '3.	Passando atendimento para analista de 2° nível</br>' + \
+                                    '</br><button id="buttonSay" class="btn btn-outline-dark mt-2" onClick="sendButton(this.value);" value="oi">Voltar ao início</button>'
+
         # endregion
         #region Cisco Jabber
         elif response_data['in_response_to'] == 'cisco jabber':
              response_data['text'] = 'Cisco Jabber - Siga as seguintes instruções:</br>' + \
-                                     '1.	Cheque se está conectado com a internet</br>'+ \
-                                     '2.	Reinicie o computador</br>'+ \
-                                     '3.	Passando atendimento para analista de 2° nível</br>'
+                                    '1.	Cheque se está conectado com a internet</br>'+ \
+                                    '2.	Reinicie o computador</br>'+ \
+                                    '3.	Passando atendimento para analista de 2° nível</br>' + \
+                                    '</br><button id="buttonSay" class="btn btn-outline-dark mt-2" onClick="sendButton(this.value);" value="oi">Voltar ao início</button>'
         # endregion
         #region Citrix
         elif response_data['in_response_to'] == 'citrix':
                 response_data['text'] = 'Citrix - Siga as seguintes instruções:</br>' + \
                     '1.	Cheque se está conectado com a internet</br>'+\
                     '2.	Reinicie o computador</br>'+\
-                    '3.	Passando atendimento para analista de 2° nível</br>'
+                    '3.	Passando atendimento para analista de 2° nível</br>'+\
+                    '</br><button id="buttonSay" class="btn btn-outline-dark mt-2" onClick="sendButton(this.value);" value="oi">Voltar ao início</button>'
+
         # endregion
         return JsonResponse(response_data, status=200)
 
